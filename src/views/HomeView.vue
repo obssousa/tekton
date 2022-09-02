@@ -1,13 +1,12 @@
 <template>
   <main>
-    <TopBar />
-    <router-view />
+    <HomeServices />
   </main>
 </template>
 
 <script lang="ts" setup>
   import { ref } from 'vue'
-  import TopBar from '@/components/TopBar.vue'
+  import HomeServices from '@/components/home/HomeServices.vue'
 </script>
 
 <style>
