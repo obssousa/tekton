@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import AboutView from '../views/AboutView.vue';
-import BlogView from '../views/BlogView.vue';
-import BlogEntryView from '../views/BlogEntryView.vue';
+import ProjectView from '../views/ProjectView.vue';
+import ProjectEntryView from '../views/ProjectEntryView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,11 +18,11 @@ const router = createRouter({
       component: AboutView,
     },
     {
-      path: '/blog',
-      name: 'blog',
-      component: BlogView,
+      path: '/projects',
+      name: 'projects',
+      component: ProjectView,
     },
-    { path: '/blog/:slug', component: BlogEntryView },
+    { path: '/projects/:slug', component: ProjectEntryView },
   ],
 });
 

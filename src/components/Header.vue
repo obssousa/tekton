@@ -56,17 +56,17 @@
             >
               <li>
                 <RouterLink to="/" class="block px-4 py-1 md:p-2 lg:px-8">
-                  Home
+                  Inicio
                 </RouterLink>
               </li>
               <li>
-                <RouterLink to="/blog" class="block px-4 py-1 md:p-2 lg:px-8">
-                  Blog
+                <RouterLink to="/projects" class="block px-4 py-1 md:p-2 lg:px-8">
+                  Projetos
                 </RouterLink>
               </li>
               <li>
                 <RouterLink to="/about" class="block px-4 py-1 md:p-2 lg:px-8">
-                  About
+                  Sobre
                 </RouterLink>
               </li>
             </ul>

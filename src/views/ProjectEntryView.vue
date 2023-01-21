@@ -1,10 +1,13 @@
 <script setup>
+import { useRoute } from 'vue-router';
 import { useStoryblok } from '@storyblok/vue';
 
-const story = await useStoryblok('home', { version: 'draft' });
+const route = useRoute();
+const story = await useStoryblok(`projects/${route.params.slug}`, {
+  version: 'draft',
+});
 
 console.log(story.value);
-
 </script>
 
 <template>
