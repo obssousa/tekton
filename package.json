@@ -7,6 +7,22 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "gridsome": "^0.7.0"
+    "@headlessui/vue": "^1.7.9",
+    "autoprefixer": "^9",
+    "gridsome": "^0.7.0",
+    "postcss": "^7",
+    "tailwindcss": "yarn:@tailwindcss/postcss7-compat"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-gridsome": "^1.6.2",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "gridsome-plugin-composition-api": "^0.0.3",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "vue-eslint-parser": "^9.1.0"
   }
 }
