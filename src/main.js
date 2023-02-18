@@ -3,6 +3,7 @@ import { StoryblokVue, apiPlugin } from '@storyblok/vue';
 import router from './router';
 import './assets/index.css';
 import App from './App.vue';
+import 'flowbite';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Grid from './components/Grid.vue';
