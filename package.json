@@ -1,30 +1,26 @@
 {
-  "name": "tekton",
+  "name": "nuxt-app",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@storyblok/vue": "^7.0.0",
-    "flowbite": "^1.6.3",
-    "flowbite-typography": "^1.0.3",
-    "tailwindcss": "^3.2.4",
-    "vue": "^3.2.45",
-    "vue-router": "4"
+    "build": "nuxt build",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@vitejs/plugin-basic-ssl": "^1.0.1",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^7.32.0 || ^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-vue": "^9.9.0",
-    "postcss": "^8.4.21",
-    "vite": "^4.0.0"
+    "@nuxtjs/tailwindcss": "^6.6.5",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-plugin-vue": "^9.10.0",
+    "nuxt": "^3.3.2",
+    "prettier": "2.8.7"
+  },
+  "dependencies": {
+    "@storyblok/nuxt": "^5.3.3",
+    "daisyui": "^2.51.5"
   }
 }
