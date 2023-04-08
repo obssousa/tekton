@@ -77,12 +77,16 @@ const links = reactive([
     route: "/",
   },
   {
+    title: "Serviços",
+    route: { path: "/", hash: "#services" },
+  },
+  {
     title: "Projetos",
-    route: "/projects",
+    route: { path: "/", hash: "#projects" },
   },
   {
     title: "Contato ",
-    route: "/about",
+    route: { path: "/", hash: "#contact" },
   },
 ]);
 

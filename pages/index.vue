@@ -4,8 +4,9 @@ import { useStoryblok } from "@storyblok/vue";
 
 <template>
   <div class="flex flex-col max-w-[1200px] bg-white z-10">
-    <HomeCarousel />
-    <HomeServices />
+    <HomeCarousel id="about" />
+    <HomeServices id="services" />
+    <HomeProjects id="projects" />
   </div>
-  <HomeInstagram class="z-10" />
+  <HomeInstagram class="z-10" id="contact" />
 </template>
