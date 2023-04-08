@@ -19,16 +19,16 @@ console.log(projects);
     >
     <div class="flex flex-row py-6 gap-2">
       <div
-        class="card bg-base-100 shadow-xl image-full max-h-[300px] h-[300px] w-full max-w-[300px]"
+        class="card bg-base-100 shadow-xl max-h-[300px] h-[300px] w-full max-w-[300px] hover:cursor-pointer hover:scale-110 hover:z-20 transition-all ease-in-out"
         v-for="project in projects"
       >
-        <figure>
-          <img :src="project.content.thumbnail" alt="Shoes" />
+        <figure class="h-full w-full">
+          <img
+            class="h-full w-full opacity-100 object-cover"
+            :src="project.content.thumbnail"
+            alt="Shoes"
+          />
         </figure>
-        <div class="card-body">
-          <h2 class="card-title">{{ project.name }}</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-        </div>
       </div>
     </div>
   </div>
