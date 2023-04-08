@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute z-10 w-full max-w-screen-xl">
+  <div class="absolute w-full max-w-[1200px] z-20">
     <header class="navbar rounded-3xl my-3 lg:my-4 w-auto lg:px-6">
       <div class="flex-1 gap-3">
         <img :src="LogoCinza" class="h-10" />

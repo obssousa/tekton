@@ -42,7 +42,7 @@ const services = reactive([
 </script>
 
 <template>
-  <div class="flex flex-col lg:m-6 gap-12">
+  <div class="flex flex-col lg:m-6 gap-12 bg-white">
     <div class="flex flex-row items-center justify-center gap-6">
       <div class="flex flex-col gap-6 w-[600px]">
         <h1 class="font-bold text-4xl text-primary-50">

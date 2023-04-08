@@ -4,8 +4,8 @@ import "vue3-instagram-feed/dist/style.css";
 </script>
 
 <template>
-  <div class="flex flex-col bg-primary-40 w-full items-center">
-    <div class="flex flex-col max-w-screen-xl w-full lg:p-6 gap-3">
+  <div class="flex flex-col bg-primary-40 w-full items-center z-10">
+    <div class="flex flex-col max-w-[1200px] w-full lg:p-6 gap-3">
       <h1 class="font-semibold text-3xl text-white">Entre em contato!</h1>
       <span class="text-xl font-medium text-white"
         >Estou ao seu dispor em todo horario comercial. Estou presencialmente em

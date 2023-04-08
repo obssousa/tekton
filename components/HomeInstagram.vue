@@ -4,7 +4,7 @@ import VueQrcode from "@chenfengyuan/vue-qrcode";
 
 <template>
   <div class="flex p-6 justify-center items-center gap-12 bg-neutral w-full">
-    <div class="flex flex-col max-w-screen-xl gap-3">
+    <div class="flex flex-col max-w-[1200px] gap-3">
       <h1 class="font-semibold text-4xl text-white">
         Me acompanhe no Instagram!
       </h1>
