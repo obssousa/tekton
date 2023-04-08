@@ -58,7 +58,7 @@ const services = reactive([
     </div>
     <div class="flex flex-row gap-4">
       <div
-        class="card w-96 bg-primary-30 shadow-xl"
+        class="card w-96 bg-primary-30 shadow-xl rounded-none first:rounded-bl-[76px] last:rounded-tr-[76px]"
         v-for="service in services"
       >
         <figure>
