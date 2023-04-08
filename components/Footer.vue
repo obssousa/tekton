@@ -4,8 +4,10 @@ import "vue3-instagram-feed/dist/style.css";
 </script>
 
 <template>
-  <div class="flex flex-col bg-primary-40 w-full items-center z-10">
-    <div class="flex flex-col max-w-[920px] w-full lg:p-6 gap-3">
+  <div
+    class="flex flex-row bg-primary-40 w-full lg:py-16 items-center justify-center z-10 max-w-[1200px]"
+  >
+    <div class="flex flex-col max-w-[700px] w-full lg:p-6 gap-4">
       <h1 class="font-semibold text-3xl text-white">Que tal bater um papo?</h1>
       <span class="text-xl font-medium text-white"
         >Estou ao seu dispor em todo horario comercial. Estou presencialmente em
@@ -19,7 +21,14 @@ import "vue3-instagram-feed/dist/style.css";
         Entrar em Contato
         <img class="pl-3 h-5" src="~~/assets/whatsapp.png" />
       </a>
+      <span class="text-xl font-medium text-white"
+        >Ou se preferir entre em contato através do email:
+        <a href="mailto:arq.brunassousa@gmail.com" class="link">
+          arq.brunassousa@gmail.com
+        </a></span
+      >
     </div>
+    <img class="w-[400px]" src="~~/assets/undraw_interview_re_e5jn.svg" />
   </div>
 </template>
 <style scoped>

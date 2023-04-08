@@ -3,32 +3,42 @@ import VueQrcode from "@chenfengyuan/vue-qrcode";
 </script>
 
 <template>
-  <div class="flex p-6 justify-center items-center gap-12 bg-neutral w-full">
-    <div class="flex flex-col max-w-[1200px] gap-3">
-      <h1 class="font-semibold text-4xl text-white">
-        Me acompanhe no Instagram!
-      </h1>
-      <span class="text-xl font-medium text-white"
-        >Confira meu trabalho realizado diariamente através das redes
-        sociais.</span
-      >
-    </div>
-    <figure class="qrcode">
-      <VueQrcode
-        class="rounded-xl"
-        value="https://www.instagram.com/brunasousa.arq/"
-        tag="svg"
-        :options="{
-          errorCorrectionLevel: 'Q',
-          width: 200,
-        }"
-      />
+  <div
+    class="flex p-6 lg:py-16 gap-3 bg-neutral w-full justify-center max-w-[1200px]"
+  >
+    <div class="flex justify-end items-center relative w-full max-w-[1200px]">
       <img
-        class="qrcode__image"
-        src="~~/assets/instagram.png"
-        alt="Bruno Sousa Arquitetura"
+        class="absolute w-[400px] z-0 left-0"
+        src="~~/assets/undraw_social_share_re_qb4v.svg"
       />
-    </figure>
+      <div class="flex flex-col max-w-[550px] z-10 gap-3">
+        <h1 class="font-semibold text-4xl text-white">
+          Me acompanhe no Instagram!
+        </h1>
+        <span class="text-xl font-medium text-white"
+          >Confira meu trabalho realizado diariamente através das redes
+          sociais.</span
+        >
+      </div>
+      <a href="https://www.instagram.com/brunasousa.arq/" target="_blank">
+        <figure class="qrcode">
+          <VueQrcode
+            class="rounded-xl"
+            value="https://www.instagram.com/brunasousa.arq/"
+            tag="svg"
+            :options="{
+              errorCorrectionLevel: 'Q',
+              width: 200,
+            }"
+          />
+          <img
+            class="qrcode__image"
+            src="~~/assets/instagram.png"
+            alt="Bruno Sousa Arquitetura"
+          />
+        </figure>
+      </a>
+    </div>
   </div>
 </template>
 <style scoped>

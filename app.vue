@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex flex-col justify-center items-center bg-gray-100">
+  <div class="relative flex flex-col justify-center items-center bg-white">
     <div class="backgroundAddress flex flex-col items-center w-full">
       <Header />
       <NuxtPage />
