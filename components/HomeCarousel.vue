@@ -17,12 +17,40 @@ const bgImages = reactive({
   third:
     "bg-cover bg-[linear-gradient(to_bottom,rgba(0,0,0,0.18951330532212884),rgba(0,0,0,0.4472163865546218)),url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80')]",
 });
+
+const { counter, reset } = useInterval(10000, {
+  controls: true,
+  immediate: true,
+});
+
+watch(counter, async (value) => {
+  changeStepInterval();
+});
+
+function changeStepInterval() {
+  if (currentStepIndex.value === 2) {
+    currentStepIndex.value = 0;
+    return;
+  }
+  currentStepIndex.value = currentStepIndex.value + 1;
+}
+
+function changeStep(index: number) {
+  currentStepIndex.value = index;
+}
 </script>
 
 <template>
   <div class="relative">
-    <div class="carousel w-full h-[700px] min-h-full rounded-b-3xl">
-      <div id="item1" class="carousel-item w-full" :class="bgImages.first">
+    <div
+      class="carousel w-full h-[700px] min-h-full rounded-b-3xl bg-slate-900 overflow-hidden"
+    >
+      <div
+        v-show="currentStepIndex === 0"
+        :class="bgImages.first"
+        class="carousel-item w-full"
+        v-motion-slide-visible-right
+      >
         <div
           class="flex flex-col mt-24 mx-6 w-full items-center justify-center gap-6 text-gray-100"
         >
@@ -39,7 +67,12 @@ const bgImages = reactive({
           <button class="btn btn-outline btn-wide">VEJA NOSSOS SERVIÇOS</button>
         </div>
       </div>
-      <div id="item2" class="carousel-item w-full" :class="bgImages.second">
+      <div
+        v-show="currentStepIndex === 1"
+        class="carousel-item w-full"
+        :class="bgImages.second"
+        v-motion-slide-visible-left
+      >
         <div
           class="flex flex-col mt-24 mx-6 w-full items-center justify-center gap-6 text-gray-100"
         >
@@ -53,9 +86,10 @@ const bgImages = reactive({
         </div>
       </div>
       <div
-        id="item3"
+        v-show="currentStepIndex === 2"
         class="carousel-item w-full flex flex-row items-center justify-center"
         :class="bgImages.third"
+        v-motion-slide-visible-right
       >
         <div class="flex flex-row mt-24 mx-6 w-[1000px] gap-6 text-gray-100">
           <img
@@ -80,9 +114,8 @@ const bgImages = reactive({
       type="1"
     >
       <li v-for="(step, index) in steps" class="w-full">
-        <a
-          :href="`#item${index + 1}`"
-          @click="currentStepIndex = index"
+        <button
+          @click="changeStep(index)"
           class="btn w-full border-0 border-b-2 rounded-none bg-transparent hover:bg-transparent hover:text-primary-60 hover:border-white"
           :class="{
             'border-primary-60 ': isCurrentStep(index),
@@ -90,8 +123,17 @@ const bgImages = reactive({
           }"
         >
           {{ step }}
-        </a>
+        </button>
       </li>
     </ol>
   </div>
 </template>
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>

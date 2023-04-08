@@ -2,7 +2,7 @@
 import { apiPlugin } from '@storyblok/vue'
 
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", ['@storyblok/nuxt', { accessToken: process.env.NUXT_API_SECRET, use: [apiPlugin] }]],
+  modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", "@vueuse/motion/nuxt", "@nuxtjs/google-fonts", ['@storyblok/nuxt', { accessToken: process.env.NUXT_API_SECRET, use: [apiPlugin] }]],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: 'tailwind.config',

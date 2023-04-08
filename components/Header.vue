@@ -81,7 +81,7 @@ const links = reactive([
     route: "/projects",
   },
   {
-    title: "Sobre",
+    title: "Contato ",
     route: "/about",
   },
 ]);
