@@ -7,7 +7,7 @@ import VueQrcode from "@chenfengyuan/vue-qrcode";
     class="flex p-6 rounded-t-3xl lg:py-16 gap-3 bg-neutral w-full justify-center md:max-w-screen-xl"
   >
     <div
-      class="flex flex-col lg:flex-row gap-8 items-center justify-end md:items-center relative w-full md:max-w-screen-xl"
+      class="flex flex-col md:flex-row gap-8 items-center justify-end md:items-center relative w-full md:max-w-screen-xl"
     >
       <img
         class="w-[320px] hidden lg:block order-3 md:w-[400px] z-0"

@@ -29,7 +29,7 @@ function closeModal() {
       Tenha um vislumbre de como pode ficar seu projeto dos sonhos.</span
     >
     <div
-      class="flex flex-row whitespace-nowrap overflow-x-scroll overflow-y-hidden md:relative h-full md:w-full md:flex-wrap py-6 gap-2 outline-none border-none"
+      class="flex flex-row whitespace-nowrap no-scrollbar md:overflow-hidden overflow-x-scroll overflow-y-hidden md:relative h-full md:w-full md:flex-wrap py-6 gap-2 outline-none border-none"
     >
       <button
         v-for="project in projects"
@@ -53,3 +53,14 @@ function closeModal() {
     :slug="currentSlug"
   />
 </template>
+<style scoped>
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+</style>

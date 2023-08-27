@@ -60,7 +60,7 @@ const services = reactive([
       />
     </div>
     <div
-      class="flex flex-row overflow-x-scroll md:overflow-hidden relative h-[527px] md:h-auto w-full"
+      class="flex flex-row overflow-x-scroll md:overflow-hidden no-scrollbar relative h-[527px] md:h-auto w-full"
     >
       <div class="flex flex-row gap-4 absolute md:relative h-full md:w-full">
         <div
@@ -86,3 +86,14 @@ const services = reactive([
     </div>
   </div>
 </template>
+<style scoped>
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+</style>
