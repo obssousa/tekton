@@ -42,9 +42,9 @@ const services = reactive([
 </script>
 
 <template>
-  <div class="flex flex-col lg:p-6 gap-12 bg-white">
-    <div class="flex flex-row items-center justify-center gap-6">
-      <div class="flex flex-col gap-6 w-[600px]">
+  <div class="flex flex-col items-start p-4 lg:p-6 gap-12 bg-white">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+      <div class="flex flex-col gap-6 w-full md:max-w-[600px]">
         <h1 class="font-bold text-4xl text-primary-50">
           Sua casa é o seu templo
         </h1>
@@ -54,25 +54,32 @@ const services = reactive([
           seu canto com a sua cara e o seu estilo!</span
         >
       </div>
-      <img class="w-[500px]" src="~~/assets/undraw_urban_design_kpu8.svg" />
+      <img
+        class="w-full md:max-w-[500px]"
+        src="~~/assets/undraw_urban_design_kpu8.svg"
+      />
     </div>
-    <div class="flex flex-row gap-4">
-      <div
-        class="card hover:-translate-y-4 hover:scale-105 transition ease-in-out delay-150 w-96 bg-primary-30 shadow-xl rounded-none first:rounded-bl-[76px] last:rounded-tr-[76px]"
-        v-for="service in services"
-      >
-        <figure>
-          <img :src="service.image" alt="Shoes" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">
-            {{ service.title }}
-            <div class="badge badge-primary">NEW</div>
-          </h2>
-          <div class="flex flex-col">
-            <li v-for="feature in service.features">
-              {{ feature }}
-            </li>
+    <div
+      class="flex flex-row overflow-x-scroll md:overflow-hidden relative h-[527px] md:h-auto w-full"
+    >
+      <div class="flex flex-row gap-4 absolute md:relative h-full md:w-full">
+        <div
+          class="block card hover:-translate-y-2 transition ease-in-out delay-150 min-h-full w-96 bg-primary-30 shadow-xl rounded-none first:rounded-bl-[76px] last:rounded-tr-[76px]"
+          v-for="service in services"
+        >
+          <figure>
+            <img :src="service.image" alt="Shoes" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">
+              {{ service.title }}
+              <div class="badge badge-primary">NEW</div>
+            </h2>
+            <div class="flex flex-col">
+              <li v-for="feature in service.features">
+                {{ feature }}
+              </li>
+            </div>
           </div>
         </div>
       </div>

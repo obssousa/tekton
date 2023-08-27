@@ -91,17 +91,19 @@ function changeStep(index: number) {
         :class="bgImages.third"
         v-motion-slide-visible-right
       >
-        <div class="flex flex-row mt-24 mx-6 w-[1000px] gap-6 text-gray-100">
+        <div
+          class="flex flex-col items-center md:flex-row md:mt-24 mx-6 w-full max-w-[1000px] gap-6 text-gray-100"
+        >
           <img
-            class="w-[300px] h-[400px] object-cover rounded-br-[76px] rounded-tl-[76px]"
+            class="w-[50%] h-[300px] md:w-[300px] md:h-[400px] object-cover rounded-br-[76px] rounded-tl-[76px]"
             src="~~/assets/profile.jpg"
           />
-          <div class="flex flex-col mt-24 mx-6 w-full gap-3 text-gray-100">
-            <h2 class="font-bold text-5xl">Quem sou eu?</h2>
-            <span class="font-medium text-2xl"
+          <div class="flex flex-col md:mt-24 mx-6 w-full gap-3 text-gray-100">
+            <h2 class="font-bold text-3xl md:text-5xl">Quem sou eu?</h2>
+            <span class="font-medium text-xl md:text-2xl"
               >Prazer, meu nome é Bruna, sua arquiteta.</span
             >
-            <span class="font-medium text-xl"
+            <span class="font-medium text-lg md:text-xl"
               >Formada da Universidade Federal do Amapá. Sou especialista em
               decoração e design de interiores.</span
             >

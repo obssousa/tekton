@@ -22,12 +22,14 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-qrcode": "2",
+    "@headlessui/vue": "^1.7.14",
     "@nuxtjs/google-fonts": "^3.0.0",
     "@storyblok/nuxt": "^5.3.3",
     "@vueuse/core": "^9.13.0",
     "@vueuse/motion": "2.0.0-beta.27",
     "daisyui": "^2.51.5",
     "qrcode": "1",
+    "v-viewer": "^3.0.11",
     "vue": "3",
     "vue3-instagram-feed": "^0.1.4",
     "vue3-parallax": "^0.1.4"

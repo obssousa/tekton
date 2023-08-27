@@ -5,7 +5,7 @@ import "vue3-instagram-feed/dist/style.css";
 
 <template>
   <div
-    class="flex flex-row bg-primary-40 w-full lg:py-16 items-center justify-center z-10 max-w-[1200px]"
+    class="flex flex-col md:flex-row p-6 bg-primary-40 gap-10 w-full lg:py-16 items-center justify-center z-10 md:max-w-screen-xl"
   >
     <div class="flex flex-col max-w-[700px] w-full lg:p-6 gap-4">
       <h1 class="font-semibold text-3xl text-white">Que tal bater um papo?</h1>

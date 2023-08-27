@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute w-full max-w-[1200px] z-20">
+  <div class="absolute w-full md:max-w-screen-xl md:max-w-screen-xl z-20">
     <header class="navbar rounded-3xl my-3 lg:my-4 w-auto lg:px-6">
       <div class="flex-1 gap-3">
         <img :src="LogoCinza" class="h-10" />
@@ -29,7 +29,7 @@
           <label tabindex="0" class="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-primary-40 -scale-y-100 -rotate-180"
+              class="h-5 w-5 text-white -scale-y-100 -rotate-180"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -44,7 +44,7 @@
           </label>
           <ul
             tabindex="0"
-            class="menu menu-compact dropdown-content -right-4 mt-3 p-2 shadow bg-white rounded-box w-52"
+            class="menu menu-compact dropdown-content right-2 mt-3 p-2 shadow bg-white rounded-box w-52"
           >
             <li v-for="link in links" :key="link.title">
               <NuxtLink
@@ -66,9 +66,8 @@
 </template>
 
 <script setup>
-import { reactive, ref, computed, onMounted } from "vue";
+import { reactive } from "vue";
 import { useRoute } from "vue-router";
-import Logo from "@/assets/logo.png";
 import LogoCinza from "@/assets/logo-cinza.png";
 
 const links = reactive([

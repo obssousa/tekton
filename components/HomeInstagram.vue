@@ -4,14 +4,16 @@ import VueQrcode from "@chenfengyuan/vue-qrcode";
 
 <template>
   <div
-    class="flex p-6 lg:py-16 gap-3 bg-neutral w-full justify-center max-w-[1200px]"
+    class="flex p-6 rounded-t-3xl lg:py-16 gap-3 bg-neutral w-full justify-center md:max-w-screen-xl"
   >
-    <div class="flex justify-end items-center relative w-full max-w-[1200px]">
+    <div
+      class="flex flex-col lg:flex-row gap-8 items-center justify-end md:items-center relative w-full md:max-w-screen-xl"
+    >
       <img
-        class="absolute w-[400px] z-0 left-0"
+        class="w-[320px] hidden lg:block order-3 md:w-[400px] z-0"
         src="~~/assets/undraw_social_share_re_qb4v.svg"
       />
-      <div class="flex flex-col max-w-[550px] z-10 gap-3">
+      <div class="flex flex-col max-w-[550px] order-2 z-10 gap-3">
         <h1 class="font-semibold text-4xl text-white">
           Me acompanhe no Instagram!
         </h1>
@@ -20,7 +22,11 @@ import VueQrcode from "@chenfengyuan/vue-qrcode";
           sociais.</span
         >
       </div>
-      <a href="https://www.instagram.com/brunasousa.arq/" target="_blank">
+      <a
+        href="https://www.instagram.com/brunasousa.arq/"
+        class="order-1"
+        target="_blank"
+      >
         <figure class="qrcode">
           <VueQrcode
             class="rounded-xl"

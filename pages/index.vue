@@ -3,7 +3,7 @@ import { useStoryblok } from "@storyblok/vue";
 </script>
 
 <template>
-  <div class="flex flex-col max-w-[1200px] bg-white z-10">
+  <div class="flex flex-col w-full md:max-w-screen-xl bg-white z-10">
     <HomeCarousel id="about" />
     <HomeServices id="services" />
     <HomeProjects id="projects" />
