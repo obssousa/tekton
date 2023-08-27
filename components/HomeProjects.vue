@@ -12,7 +12,6 @@ const showModal = ref(false);
 
 function showCurrentProject(full_slug) {
   currentSlug.value = full_slug;
-  console.log(full_slug);
   showModal.value = true;
 }
 

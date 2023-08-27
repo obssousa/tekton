@@ -28,7 +28,6 @@ onMounted(async () => {
       version: "draft",
     })
     .then((response) => {
-      console.log(response.data.story);
       story.value = response.data.story;
       images.value = story.value.content.images.map((image) => image.filename);
     })
@@ -44,8 +43,10 @@ onMounted(async () => {
     <div class="fixed inset-0 bg-black/30" aria-hidden="true" />
 
     <!-- Full-screen container to center the panel -->
-    <div class="fixed inset-0 overflow-y-auto">
-      <div class="flex min-h-full items-center justify-center p-4">
+    <div class="xl:flex justify-center fixed inset-0 overflow-y-auto">
+      <div
+        class="flex min-h-full items-center justify-center p-4 xl:max-w-screen-xl w-full"
+      >
         <!-- The actual dialog panel -->
         <DialogPanel
           class="overflow-x-hidden min-w-full min-h-[calc(100vh_-_35px)] rounded bg-white h-full"
@@ -106,17 +107,15 @@ onMounted(async () => {
             <Transition>
               <Viewer
                 v-if="images.length > 0"
-                :images="images"
-                class="viewer transition-opacity ease-in duration-700 opacity-100"
+                :images="[...images, ...images, ...images]"
+                class="viewer transition-opacity ease-in duration-700 opacity-100 max-w-[1248px] overflow-scroll"
                 ref="viewer"
               >
                 <template #default="scope">
-                  <div
-                    class="grid grid-cols-[repeat(8,_1fr)] grid-rows-[repeat(8,_5vw)]"
-                  >
+                  <div class="flex flex-wrap flex-start gap-4 w-[1248px]">
                     <img
                       v-for="src in scope.images"
-                      class="max-w-[300px] object-cover"
+                      class="max-w-[300px] max-h-[300px] h-[300px] w-full object-cover"
                       :src="src"
                       :key="src"
                     />
