@@ -60,11 +60,10 @@ const services = reactive([
       />
     </div>
     <div
-      class="flex flex-row overflow-x-scroll md:overflow-hidden no-scrollbar relative h-[527px] md:h-auto w-full"
+      class="flex flex-row gap-3 overflow-x-scroll xl:overflow-hidden no-scrollbar relative h-[527px] xl:h-auto w-full px-3 pb-10"
     >
-      <div class="flex flex-row gap-4 absolute md:relative h-full md:w-full">
         <div
-          class="block card hover:-translate-y-2 transition ease-in-out delay-150 min-h-full w-96 bg-primary-30 shadow-xl rounded-none first:rounded-bl-[76px] last:rounded-tr-[76px]"
+          class="flex card hover:-translate-y-2 transition ease-in-out delay-150 min-h-full min-w-[300px] w-[300px] bg-primary-30 shadow-xl rounded-none first:rounded-bl-[76px] last:rounded-tr-[76px]"
           v-for="service in services"
         >
           <figure>
@@ -83,17 +82,19 @@ const services = reactive([
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 <style scoped>
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+@media (max-width: 768px) {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  } 
 }
 </style>

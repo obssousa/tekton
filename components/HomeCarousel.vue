@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import { useMediaQuery } from '@vueuse/core'
 const currentStepIndex = ref<number>(0);
+const isMobile = useMediaQuery('(max-width: 768px)')
 
-const steps = reactive([
+const steps = reactive(!isMobile.value ? [
   "Arquitetura Acessivel",
   "O Projeto Do Seu Jeito",
   "Quem sou?",
-]);
+] : ['Arquitetura', 'Projetos', 'Quem sou?']);
 
 const isCurrentStep = (index: number) => index === currentStepIndex.value;
 
@@ -38,6 +40,8 @@ function changeStepInterval() {
 function changeStep(index: number) {
   currentStepIndex.value = index;
 }
+
+const servicesRoute = { path: "/", hash: "#services" };
 </script>
 
 <template>
@@ -52,7 +56,7 @@ function changeStep(index: number) {
         v-motion-slide-visible-right
       >
         <div
-          class="flex flex-col mt-24 mx-6 w-full items-center justify-center gap-6 text-gray-100"
+          class="flex flex-col mt-24 mx-6 mb-12 md:mb-0 w-full items-center justify-center gap-6 text-gray-100"
         >
           <h2 class="font-bold text-5xl">
             Arquitetura acessivel e direto ao ponto
@@ -64,7 +68,7 @@ function changeStep(index: number) {
           <span class="font-medium text-xl"
             >Você não precisa de muito para começar!</span
           >
-          <button class="btn btn-outline btn-wide">VEJA NOSSOS SERVIÇOS</button>
+          <NuxtLink :to="servicesRoute" class="btn btn-outline btn-wide" @click="">VEJA MEUS SERVIÇOS</NuxtLink>
         </div>
       </div>
       <div
@@ -118,9 +122,9 @@ function changeStep(index: number) {
       <li v-for="(step, index) in steps" class="w-full">
         <button
           @click="changeStep(index)"
-          class="btn w-full border-0 border-b-2 rounded-none bg-transparent hover:bg-transparent hover:text-primary-60 hover:border-white"
+          class="btn w-full border-0 border-b-2 rounded-none bg-transparent hover:bg-transparent xl:hover:text-primary-60 hover:border-white"
           :class="{
-            'border-primary-60 ': isCurrentStep(index),
+            'border-primary-60 text-primary-60': isCurrentStep(index),
             'border-white': !isCurrentStep(index),
           }"
         >
