@@ -28,7 +28,7 @@ function closeModal() {
       Tenha um vislumbre de como pode ficar seu projeto dos sonhos.</span
     >
     <div
-      class="flex flex-row whitespace-nowrap no-scrollbar md:overflow-hidden overflow-x-scroll overflow-y-hidden md:relative h-full md:w-full md:flex-wrap py-6 gap-2 outline-none border-none"
+      class="flex flex-row whitespace-nowrap no-scrollbar md:overflow-hidden overflow-x-scroll overflow-y-hidden md:relative h-full md:w-full md:flex-wrap py-6 gap-2 outline-none border-none px-3 pb-10"
     >
       <button
         v-for="project in projects"

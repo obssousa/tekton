@@ -60,7 +60,7 @@ const services = reactive([
       />
     </div>
     <div
-      class="flex flex-row gap-3 overflow-x-scroll xl:overflow-hidden no-scrollbar relative h-[527px] xl:h-auto w-full px-3 pb-10"
+      class="flex flex-row gap-3 overflow-x-scroll xl:overflow-hidden no-scrollbar relative h-[527px] xl:h-auto w-full px-3 pb-8"
     >
         <div
           class="flex card hover:-translate-y-2 transition ease-in-out delay-150 min-h-full min-w-[300px] w-[300px] bg-primary-30 shadow-xl rounded-none first:rounded-bl-[76px] last:rounded-tr-[76px]"
